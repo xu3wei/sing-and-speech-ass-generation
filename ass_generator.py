@@ -8,7 +8,7 @@ def frame_to_timestamp(frame_idx: int, fps: float) -> str:
     seconds = total_seconds % 60
     return f"{hours}:{minutes:02d}:{seconds:05.2f}"
 def generate_ass_file(subtitles: List[Dict], video_path: str, video_width: int, video_height: int, use_speaker_styles: bool = False,
-                      enable_trans:bool=False,tr_prompt:str='あいみ翻译成爱美',tr_model:str='HY-MT1.5-7B',tr_content='',
+                      enable_trans:bool=False,tr_prompt:str='',tr_model:str='HY-MT1.5-7B',tr_content='',
                       tr_language:str='中文',enable_single_tr:bool=False,font="方正准圆_GBK",font_size=72,PrimaryColour="&H00FFFFFF",
                       SecondaryColour="&H000000FF",OutlineColour="&H00000000",Bold=0,Italic=0,Underline=0,StrikeOut=0,BackColour="&H80000000",ScaleX=100,ScaleY=100,Spacing=0,Angle=0,BorderStyle=1,Outline=2,Shadow=0,Alignment=2,MarginL=10,MarginR=10,MarginV=10,Encoding=0) -> str:
     ass_header = f"""[Script Info]
