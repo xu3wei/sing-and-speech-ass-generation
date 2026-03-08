@@ -32,7 +32,7 @@ def tr(tg,ct='',tl='中文',ot2tt='',mp='HY-MT1.5-7B'):
         参考上面的信息，参考下面的翻译：
         {ot2tt}
         
-        将以下日语文本翻译为{tl}，注意只需要输出翻译后的结果，不要额外解释,其中|end|为格式信息，请保留：
+        将以下文本翻译为{tl}，注意只需要输出翻译后的结果，不要额外解释,其中|end|为格式信息，请保留：
         {t}'''
         messages = [{"role": "user", "content":prompt}]
         tokenized_chat = tokenizer.apply_chat_template(messages,tokenize=True,add_generation_prompt=False,return_tensors="pt")
